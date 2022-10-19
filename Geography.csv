@@ -1,0 +1,77 @@
+geoid,region,country_name,continent
+es0,galicia,Spain,Europe
+fr1,upland france,France,Europe
+uk2,london,United Kingdom,Europe
+de3,rhineland-palatinate,Germany,Europe
+de4,schleswig-holstein,Germany,Europe
+de5,saarland,Germany,Europe
+de6,berlin,Germany,Europe
+uk7,south east england,United Kingdom,Europe
+de8,baden-wuttemberg,Germany,Europe
+nz9,north island-southern,New Zealand,Oceania
+de10,bavaria,Germany,Europe
+es11,aragon,Spain,Europe
+us12,mid-atalntic,USA,North America
+es13,asturleon,Spain,Europe
+au14,queensland,Australia,Oceania
+be15,brussels,Belgium,Europe
+de16,thuringia,Germany,Europe
+de17,hamburg,Germany,Europe
+uk18,south west england,United Kingdom,Europe
+it19,center italy,Italy,Europe
+uk20,north east england,United Kingdom,Europe
+de21,saxony,Germany,Europe
+de22,lower saxony,Germany,Europe
+es23,andalucia,Spain,Europe
+us24,mid-west usa,USA,North America
+be25,wallonia,Belgium,Europe
+de26,bremen,Germany,Europe
+ie27,munster,Ireland,Europe
+uk28,yorkshire,United Kingdom,Europe
+fr29,north west france,France,Europe
+ie30,leinster,Ireland,Europe
+it31,south italy,Italy,Europe
+es32,vascongadas,Spain,Europe
+de33,hessen,Germany,Europe
+us34,north-east usa,USA,North America
+it35,north italy,Italy,Europe
+uk36,wales,United Kingdom,Europe
+uk37,east england,United Kingdom,Europe
+uk38,scotland,United Kingdom,Europe
+ca39,ontario,Canada,North America
+au40,western australia,Australia,Oceania
+de41,north rhine-westphalla,Germany,Europe
+de42,brandenburg,Germany,Europe
+au43,new south wales,Australia,Oceania
+de44,mecklenburg-vorpommern,Germany,Europe
+fr45,southwest france,France,Europe
+fr46,north east france,France,Europe
+au47,tasmania,Australia,Oceania
+uk48,north west england,United Kingdom,Europe
+ca49,atlantic provinces,Canada,North America
+de50,saxony-anhalt,Germany,Europe
+nz51,north island-central west,New Zealand,Oceania
+es52,castilla,Spain,Europe
+us53,north west usa,USA,North America
+uk54,west midlands,United Kingdom,Europe
+au55,northern territory,Australia,Oceania
+nz56,north island-central east,New Zealand,Oceania
+fr57,le midi france,France,Europe
+uk58,east midlands,United Kingdom,Europe
+nz59,northern island-northern,New Zealand,Oceania
+ca60,the north,Canada,North America
+us61,west usa,USA,North America
+us62,south-east usa,USA,North America
+nz63,south island-central,New Zealand,Oceania
+ca64,prairie provinces,Canada,North America
+ca65,quebec,Canada,North America
+nz66,south island northern,New Zealand,Oceania
+ie67,connaught,Ireland,Europe
+us68,south west usa,USA,North America
+ie69,ulster,Ireland,Europe
+ca70,british columbia,Canada,North America
+be71,flanders,Belgium,Europe
+au72,south australia,Australia,Oceania
+au73,victoria,Australia,Oceania
+fr74,heart of france,France,Europe
+nz75,south island-southern,New Zealand,Oceania
