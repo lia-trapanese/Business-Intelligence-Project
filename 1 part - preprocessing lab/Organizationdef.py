@@ -19,7 +19,7 @@ with open(r'C:\Users\Utente\Desktop\Università\Pisa\Primo semestre - Secondo an
     
     
 
-    for line in file.readlines():
+    for line in file.readlines()[1:]:
         row= line.split(',')
         
 
