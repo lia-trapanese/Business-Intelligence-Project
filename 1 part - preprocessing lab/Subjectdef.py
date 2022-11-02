@@ -36,7 +36,7 @@ inv_d = {str(v): k for k, v in d.items()}
 with open(r'C:\Users\Utente\Desktop\Università\Pisa\Primo semestre - Secondo anno\Laboratory of datat science\PROGETTO\TRACCIA\answerdatasetnew\subject_metadata.csv', mode='r') as subfile:        
     with open(r'C:\Users\Utente\Desktop\Università\Pisa\Primo semestre - Secondo anno\Laboratory of datat science\PROGETTO\codici finiti\Subject.csv', mode='w') as sufile:
         
-        header= 'subjectid, description\n'
+        header= 'subjectid,description\n'
         sufile.write(header)
             
         subject= dict()
