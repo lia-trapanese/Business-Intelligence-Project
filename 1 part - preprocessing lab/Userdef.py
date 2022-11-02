@@ -17,7 +17,7 @@ users=set()
 with open(r'C:\Users\Utente\Desktop\Università\Pisa\Primo semestre - Secondo anno\Laboratory of datat science\PROGETTO\TRACCIA\answerdatasetnew\answerdatacorrect.csv', mode='r') as file:
     with open(r'C:\Users\Utente\Desktop\Università\Pisa\Primo semestre - Secondo anno\Laboratory of datat science\PROGETTO\codici finiti\User.csv', mode='w') as userfile:
         
-        header= 'userid, dateofbirthid, geoid, gender\n'
+        header= 'userid,dateofbirthid,geoid,gender\n'
         userfile.write(header)
         skip=True
         for riga in file.readlines()[1:]: 
