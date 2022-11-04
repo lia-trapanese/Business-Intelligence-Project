@@ -70,3 +70,13 @@ def codificaRegione(filename):
     return regioncod  
 
 
+def addDate(col):
+    if row[col][:10].replace('-', '') not in no_duplicates:
+        no_duplicates.add(row[col][:10].replace('-', ''))
+        dateid.append(row[col][:10].replace('-', ''))
+        date.append(row[col][:10])
+        year.append(row[col][:4])
+        moth = row[col][5:7].lstrip('0') 
+        month.append(moth)   
+        quarter.append(quarter_generator(moth))
+        day.append(row[col][8:10])
