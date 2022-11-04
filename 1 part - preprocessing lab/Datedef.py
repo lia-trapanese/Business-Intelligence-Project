@@ -27,17 +27,9 @@ with open(r'C:\Users\Utente\Desktop\Università\Pisa\Primo semestre - Secondo an
     for line in file.readlines()[1:]: 
         row= line.split(',')  
         
-        for col in range(len(row)):                        
-            if col == 6 or col == 8:    
-                if row[col] not in no_duplicates:
-                    no_duplicates.add(row[col])
-                    dateid.append(row[col][:10].replace('-', ''))
-                    date.append(row[col][:10])
-                    year.append(row[col][:4])
-                    moth = row[col][5:7].lstrip('0') 
-                    month.append(moth)   
-                    quarter.append(quarter_generator(moth))
-                    day.append(row[col][8:10])
+        addDate(6)
+        addDate(8)
+
         
 
 
