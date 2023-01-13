@@ -1,0 +1,10 @@
+subjectid,difficulty
+260,Hard
+284,Hard
+328,Hard
+381,Hard
+293,Easy
+299,Easy
+305,Easy
+364,Easy
+395,Easy
