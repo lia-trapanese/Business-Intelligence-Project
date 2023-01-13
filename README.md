@@ -1,1 +1,1 @@
-# Laboratory-of-Data-Science
+# Business Intelligence project
