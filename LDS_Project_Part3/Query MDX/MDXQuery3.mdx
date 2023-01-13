@@ -1,0 +1,24 @@
+--For each continent, show the student with the highest ratio between his total correct answers 
+-- and the average correct answers of that continent
+
+with member avg_corr_ans_by_cont as 
+	([Users].[UserGeographyHier].currentmember.parent.parent.parent, [Measures].[sum_correctAnswer])/
+	([Users].[UserGeographyHier].currentmember.parent.parent.parent, [Measures].[Conteggio di Answers])
+
+
+member user_ratio as
+([Users].[UserGeographyHier].currentmember, [Measures].[sum_correctAnswer])/avg_corr_ans_by_cont
+
+member max_user_ratio as 
+	max(([Users].[UserGeographyHier].currentmember.parent.parent.parent, 
+		[Users].[Userid].[Userid]),
+		user_ratio
+		)
+
+select {avg_corr_ans_by_cont, user_ratio, max_user_ratio, [Measures].[sum_correctAnswer]} on columns,
+nonempty(
+	filter(
+		([Users].[Continent].[Continent], [Users].[UserGeographyHier].[Userid] ), 
+		user_ratio = max_user_ratio) 
+	) on rows
+from [Group_11_DB]

@@ -1,0 +1,12 @@
+-- for each subject, show the student with the highest total correct answer
+
+with member max_answer as
+MAX(([Subject].[Description].currentMember, [Users].[Userid].[Userid]),[Measures].[sum_correctAnswer])
+
+select max_answer on columns,
+nonempty(
+	filter(
+		([Subject].[Description].[Description], [Users].[Userid].[Userid]), 
+		max_answer=[Measures].[sum_correctAnswer])
+		) on rows
+from [Group_11_DB]

@@ -1,0 +1,9 @@
+-- Show the student that made the most mistakes for each country.
+
+select [Measures].[sum_wrongAnswer] on columns,
+nonempty (generate(
+[Users].[Country Name].[Country Name], 
+topcount (([Users].[Country Name].currentmember, [Users].[Userid].[Userid]), 1 ,[Measures].[sum_wrongAnswer])
+
+)) on rows
+from [Group_11_DB]
