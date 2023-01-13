@@ -1,0 +1,2004 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/21/2022 8:04:06 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LIA"
+  DTS:CreatorName="LIA\Utente"
+  DTS:DTSID="{A5AD4EFB-7A12-4B15-B46F-1660D0DB3E8B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.845.0"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Assignment 2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{3C1B7388-D8F3-49CA-A7B2-357DCD0BC4A5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5D462325-07D3-483C-8D2A-23169BFF74A8}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1040"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Utente\Desktop\Università\Pisa\Primo semestre - Secondo anno\Laboratory of datat science\PROGETTO\SSIS\Assignment 2.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country_name"
+              DTS:DTSID="{7AC6698A-1F48-4889-A822-2DCFA3F75E04}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="userid"
+              DTS:DTSID="{59BBD7C5-59A6-4137-82E6-4D6639D67A76}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tot_corrects"
+              DTS:DTSID="{667A9517-2C6F-45AB-BD7E-1F898612CF56}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Max Tot_corrects"
+              DTS:DTSID="{7A414AE3-FDD7-44BC-99D9-8B0B99D683D7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{EA0CA4FA-7363-4C6D-B95E-E43C87D76ECD}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Utente\Desktop\Università\Pisa\Primo semestre - Secondo anno\Laboratory of datat science\PROGETTO\SSIS\Assignemt 2.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country_name"
+              DTS:DTSID="{9D74287B-24DE-469E-B335-4312090026BC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="userid"
+              DTS:DTSID="{0DE661F7-A46A-432D-B294-37B915A0B19F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Max Tot_corrects"
+              DTS:DTSID="{4F8F9B50-B235-4DD0-8B8C-B87CA61138CA}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F6189DCF-1D37-4B99-B774-C48C6BEF6A27}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Utente\Desktop\Università\Pisa\Primo semestre - Secondo anno\Laboratory of datat science\PROGETTO\SSIS\Second part LDS\result_assignment2.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country_name"
+              DTS:DTSID="{7950BAD4-C571-4530-96A0-439FE5FF269E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="userid"
+              DTS:DTSID="{6F8EFE37-E4B6-454A-AB6E-BD74DE40E7BC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Max Tot_corrects"
+              DTS:DTSID="{EC2CE133-0045-4DC5-B3B2-09527F3960A8}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lds.di.unipi.it.Group_11_DB.Group_11]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F45FBF02-F60D-49EF-A8ED-62669F5E46B7}"
+      DTS:ObjectName="lds.di.unipi.it.Group_11_DB.Group_11">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lds.di.unipi.it;User ID=Group_11;Initial Catalog=Group_11_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-Package2-{F45FBF02-F60D-49EF-A8ED-62669F5E46B7}lds.di.unipi.it.Group_11_DB.Group_11;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+5nkWoEGPEGQevKvW02PLgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABfjx9ic48AeqDbeFuSQGolAgffoaCzvhTQjkokJ8u4VwAAAAAOgAAAAAIAACAAAABjs8g19hWhx2QPNfg7RScfCdpdYWYETpO/OezzG5ECCyAAAAAvAr8EWAmYfqpF1zfRXYOXJjKUqzpvM3laOGVgSY52/0AAAAAMMc8jS827Kg8ACpy9Aw7UuxXdHhAUg1Iw9x19jfaCWBe4Z2nfRY1KcVPqsQDzCqkzwsGBfChItntppHHTeflf</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Attività Flusso di dati"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Attività Flusso di dati"
+      DTS:DTSID="{43BB9017-25CF-4F99-8B90-D630817F4E76}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Attività Flusso di dati"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Attività Flusso di dati\Access to Geography on geoid"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Access to Geography on geoid"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Geography]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Geography]) [refTable]
+where [refTable].[geoid] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="geoid" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="region" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country_name" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="continent" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca].Columns[geoid]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Access to Geography on geoid.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_11_DB.Group_11]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_11_DB.Group_11]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Access to Geography on geoid.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Access to Geography on geoid.Inputs[Input ricerca].Columns[geoid]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="geoid"
+                      lineageId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca].Columns[geoid]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">geoid</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Access to Geography on geoid.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Access to Geography on geoid.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Access to Geography on geoid.Outputs[Output corrispondenza ricerca].Columns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="50"
+                      lineageId="Package\Attività Flusso di dati\Access to Geography on geoid.Outputs[Output corrispondenza ricerca].Columns[country_name]"
+                      name="country_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">country_name</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Access to Geography on geoid.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Access to Geography on geoid.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Access to Geography on geoid.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Access to Geography on geoid.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Access to Geography on geoid.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Access to Geography on geoid.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Access to Geography on geoid.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Access to Geography on geoid.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Access to Users on userid"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Access to Users on userid"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Users]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Users]) [refTable]
+where [refTable].[userid] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="userid" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="dateofbirthid" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="geoid" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="gender" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[userid]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Access to Users on userid.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_11_DB.Group_11]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_11_DB.Group_11]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Access to Users on userid.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Access to Users on userid.Inputs[Input ricerca].Columns[userid]"
+                      cachedDataType="i4"
+                      cachedName="userid"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[userid]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">userid</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Access to Users on userid.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca].Columns[geoid]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="50"
+                      lineageId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca].Columns[geoid]"
+                      name="geoid"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">geoid</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Access to Users on userid.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Access to Users on userid.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Max of correct answers per country"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Max of correct answers per country"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Max of correct answers per country.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Max of correct answers per country.Inputs[Input aggregazione 1].Columns[country_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="country_name"
+                      lineageId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[country_name]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Max of correct answers per country.Inputs[Input aggregazione 1].Columns[Tot_corrects]"
+                      cachedDataType="i8"
+                      cachedName="Tot_corrects"
+                      lineageId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[Tot_corrects]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Max of correct answers per country.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Max of correct answers per country.Outputs[Output aggregazione 1].Columns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Attività Flusso di dati\Max of correct answers per country.Outputs[Output aggregazione 1].Columns[country_name]"
+                      name="country_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[country_name]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Max of correct answers per country.Outputs[Output aggregazione 1].Columns[Max Tot_corrects]"
+                      dataType="i8"
+                      lineageId="Package\Attività Flusso di dati\Max of correct answers per country.Outputs[Output aggregazione 1].Columns[Max Tot_corrects]"
+                      name="Max Tot_corrects">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[Tot_corrects]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">7</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Suddivisione condizionale;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Indirizza righe di dati a output diversi a seconda del contenuto dei dati. Usare le condizioni (espressioni SSIS) per specificare le righe da indirizzare. Ad esempio, separare i record da eliminare da quelli pronti per essere caricati oppure indirizzare unicamente un subset di record."
+              name="Max_tot_corrects equal to tot_corrects"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects.Inputs[Input suddivisione condizionale]"
+                  description="Input della trasformazione Suddivisione condizionale"
+                  name="Input suddivisione condizionale">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects.Inputs[Input suddivisione condizionale].Columns[Tot_corrects]"
+                      cachedDataType="i8"
+                      cachedName="Tot_corrects"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Tot_corrects]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects.Inputs[Input suddivisione condizionale].Columns[Max Tot_corrects]"
+                      cachedDataType="i8"
+                      cachedName="Max Tot_corrects"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Max Tot_corrects]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects.Outputs[max correct answer]"
+                  description="Output 1 della trasformazione Suddivisione condizionale"
+                  errorOrTruncationOperation="Calcolo"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="max correct answer"
+                  synchronousInputId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects.Inputs[Input suddivisione condizionale]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica l'espressione. Questa versione dell'espressione utilizza gli identificatori di derivazione anziché i nomi di colonna."
+                      name="Expression">#{Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Max Tot_corrects]} == #{Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Tot_corrects]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica la versione descrittiva dell'espressione. Questa versione dell'espressione utilizza i nomi di colonna."
+                      expressionType="Notify"
+                      name="FriendlyExpression">[Max Tot_corrects] == Tot_corrects</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la posizione della condizione nell'elenco delle condizioni valutate dalla trasformazione. L'ordine di valutazione è crescente, dal valore più basso al più alto."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects.Outputs[Output predefinito suddivisione condizionale]"
+                  description="Output predefinito per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  name="Output predefinito suddivisione condizionale"
+                  synchronousInputId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects.Inputs[Input suddivisione condizionale]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects.Outputs[Output errori suddivisione condizionale]"
+                  description="Output degli errori per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori suddivisione condizionale"
+                  synchronousInputId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects.Inputs[Input suddivisione condizionale]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Merge join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Combina due flussi di dati ordinati in uno solo tramite join di tipo FULL, LEFT o INNER. Questa trasformazione è consigliata quando i flussi di dati possono essere ordinati alle relative origini."
+              name="Merge join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di join da eseguire."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero di colonne nella chiave di ordinamento."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se i valori Null vengono considerati come valori uguali."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indica il numero massimo di buffer richiesti per input prima dell'attivazione del blocco."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro]"
+                  hasSideEffects="true"
+                  name="Input merge join sinistro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[country_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="country_name"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Attività Flusso di dati\Sort on country_name and userid.Outputs[Output ordinamento].Columns[country_name]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[userid]"
+                      cachedDataType="i4"
+                      cachedName="userid"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Attività Flusso di dati\Sort on country_name and userid.Outputs[Output ordinamento].Columns[userid]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[Tot_corrects]"
+                      cachedDataType="i8"
+                      cachedName="Tot_corrects"
+                      lineageId="Package\Attività Flusso di dati\Sort on country_name and userid.Outputs[Output ordinamento].Columns[Tot_corrects]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro]"
+                  hasSideEffects="true"
+                  name="Input merge join destro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro].Columns[country_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="country_name"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Attività Flusso di dati\Sort on country_name.Outputs[Output ordinamento].Columns[country_name]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro].Columns[Max Tot_corrects]"
+                      cachedDataType="i8"
+                      cachedName="Max Tot_corrects"
+                      lineageId="Package\Attività Flusso di dati\Sort on country_name.Outputs[Output ordinamento].Columns[Max Tot_corrects]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join]"
+                  isSorted="true"
+                  name="Output merge join">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[country_name]"
+                      name="country_name"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[country_name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[userid]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[userid]"
+                      name="userid">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[userid]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Tot_corrects]"
+                      dataType="i8"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Tot_corrects]"
+                      name="Tot_corrects">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro].Columns[Tot_corrects]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Max Tot_corrects]"
+                      dataType="i8"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Max Tot_corrects]"
+                      name="Max Tot_corrects">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro].Columns[Max Tot_corrects]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Distribuisce ogni riga di input a ogni riga di uno o più output. Ad esempio, creare un nuovo ramo del flusso di dati per creare una copia dei dati in modo che sia possibile mascherare alcuni valori prima di condividerli con partner esterni."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\Attività Flusso di dati\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Multicast.Outputs[Output multicast 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Output multicast 1"
+                  synchronousInputId="Package\Attività Flusso di dati\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Multicast.Outputs[Output multicast 2]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Output multicast 2"
+                  synchronousInputId="Package\Attività Flusso di dati\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Read table Answers"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+              description="Origine OLE DB"
+              name="Read table Answers"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowset">[dbo].[Answers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Variabile che contiene il comando SQL da eseguire."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la modalità utilizzata per accedere al database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mapping tra i parametri nel comando SQL e le variabili."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Read table Answers.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_11_DB.Group_11]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_11_DB.Group_11]"
+                  description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB]"
+                  name="Output origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[userid]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[userid]"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[userid]"
+                      name="userid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[iscorrect]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[iscorrect]"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[iscorrect]"
+                      name="iscorrect"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[answerid]"
+                      dataType="i4"
+                      name="answerid" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[questionid]"
+                      dataType="i4"
+                      name="questionid" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[userid]"
+                      dataType="i4"
+                      name="userid" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[organizationid]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="organizationid" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[dateid]"
+                      dataType="i4"
+                      name="dateid" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[subjectid]"
+                      dataType="i4"
+                      name="subjectid" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[answer_value]"
+                      dataType="i4"
+                      name="answer_value" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[correct_answer]"
+                      dataType="i4"
+                      name="correct_answer" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[iscorrect]"
+                      dataType="i4"
+                      name="iscorrect" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[confidence]"
+                      dataType="r8"
+                      name="confidence" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB]"
+                  isErrorOut="true"
+                  name="Output errori origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[userid]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[userid]"
+                      name="userid" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[iscorrect]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[iscorrect]"
+                      name="iscorrect" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Sort on country_name"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Sort on country_name"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Sort on country_name.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Sort on country_name.Inputs[Input ordinamento].Columns[country_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="country_name"
+                      lineageId="Package\Attività Flusso di dati\Max of correct answers per country.Outputs[Output aggregazione 1].Columns[country_name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Sort on country_name.Inputs[Input ordinamento].Columns[Max Tot_corrects]"
+                      cachedDataType="i8"
+                      cachedName="Max Tot_corrects"
+                      lineageId="Package\Attività Flusso di dati\Max of correct answers per country.Outputs[Output aggregazione 1].Columns[Max Tot_corrects]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Sort on country_name.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Sort on country_name.Outputs[Output ordinamento].Columns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Attività Flusso di dati\Sort on country_name.Outputs[Output ordinamento].Columns[country_name]"
+                      name="country_name"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\Max of correct answers per country.Outputs[Output aggregazione 1].Columns[country_name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Sort on country_name.Outputs[Output ordinamento].Columns[Max Tot_corrects]"
+                      dataType="i8"
+                      lineageId="Package\Attività Flusso di dati\Sort on country_name.Outputs[Output ordinamento].Columns[Max Tot_corrects]"
+                      name="Max Tot_corrects">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\Max of correct answers per country.Outputs[Output aggregazione 1].Columns[Max Tot_corrects]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Sort on country_name and userid"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Sort on country_name and userid"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Sort on country_name and userid.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Sort on country_name and userid.Inputs[Input ordinamento].Columns[country_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="country_name"
+                      lineageId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[country_name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Sort on country_name and userid.Inputs[Input ordinamento].Columns[userid]"
+                      cachedDataType="i4"
+                      cachedName="userid"
+                      lineageId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[userid]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Sort on country_name and userid.Inputs[Input ordinamento].Columns[Tot_corrects]"
+                      cachedDataType="i8"
+                      cachedName="Tot_corrects"
+                      lineageId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[Tot_corrects]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Sort on country_name and userid.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Sort on country_name and userid.Outputs[Output ordinamento].Columns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Attività Flusso di dati\Sort on country_name and userid.Outputs[Output ordinamento].Columns[country_name]"
+                      name="country_name"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[country_name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Sort on country_name and userid.Outputs[Output ordinamento].Columns[userid]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Sort on country_name and userid.Outputs[Output ordinamento].Columns[userid]"
+                      name="userid"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[userid]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Sort on country_name and userid.Outputs[Output ordinamento].Columns[Tot_corrects]"
+                      dataType="i8"
+                      lineageId="Package\Attività Flusso di dati\Sort on country_name and userid.Outputs[Output ordinamento].Columns[Tot_corrects]"
+                      name="Tot_corrects">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[Tot_corrects]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Sum the correct answers per country and userid"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Sum the correct answers per country and userid"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Inputs[Input aggregazione 1].Columns[country_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="country_name"
+                      lineageId="Package\Attività Flusso di dati\Access to Geography on geoid.Outputs[Output corrispondenza ricerca].Columns[country_name]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Inputs[Input aggregazione 1].Columns[userid]"
+                      cachedDataType="i4"
+                      cachedName="userid"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[userid]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Inputs[Input aggregazione 1].Columns[iscorrect]"
+                      cachedDataType="i4"
+                      cachedName="iscorrect"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[iscorrect]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[country_name]"
+                      name="country_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Access to Geography on geoid.Outputs[Output corrispondenza ricerca].Columns[country_name]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[userid]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[userid]"
+                      name="userid">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[userid]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[Tot_corrects]"
+                      dataType="i8"
+                      lineageId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1].Columns[Tot_corrects]"
+                      name="Tot_corrects">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[iscorrect]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\To Result_assignment2"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destinazione file flat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Destinazione file flat"
+              localeId="1033"
+              name="To Result_assignment2"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifica se i dati verranno sovrascritti o accodati nel file di destinazione."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il testo da scrivere nel file di destinazione prima della scrittura dei dati."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando il qualificatore di testo è abilitato, specifica se il qualificatore di testo nei dati scritti nel file di destinazione verrà o meno preceduto da un carattere di escape."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\To Result_assignment2.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\To Result_assignment2.Inputs[Input destinazione file flat]"
+                  hasSideEffects="true"
+                  name="Input destinazione file flat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\To Result_assignment2.Inputs[Input destinazione file flat].Columns[country_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="country_name"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\To Result_assignment2.Inputs[Input destinazione file flat].ExternalColumns[country_name]"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[country_name]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\To Result_assignment2.Inputs[Input destinazione file flat].Columns[userid]"
+                      cachedDataType="i4"
+                      cachedName="userid"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\To Result_assignment2.Inputs[Input destinazione file flat].ExternalColumns[userid]"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[userid]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\To Result_assignment2.Inputs[Input destinazione file flat].Columns[Max Tot_corrects]"
+                      cachedDataType="i8"
+                      cachedName="Max Tot_corrects"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\To Result_assignment2.Inputs[Input destinazione file flat].ExternalColumns[Max Tot_corrects]"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[Max Tot_corrects]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\To Result_assignment2.Inputs[Input destinazione file flat].ExternalColumns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="country_name" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\To Result_assignment2.Inputs[Input destinazione file flat].ExternalColumns[userid]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="userid" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\To Result_assignment2.Inputs[Input destinazione file flat].ExternalColumns[Max Tot_corrects]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Max Tot_corrects" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Attività Flusso di dati.Paths[max correct answer]"
+              endId="Package\Attività Flusso di dati\To Result_assignment2.Inputs[Input destinazione file flat]"
+              name="max correct answer"
+              startId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects.Outputs[max correct answer]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Multicast Output 1]"
+              endId="Package\Attività Flusso di dati\Max of correct answers per country.Inputs[Input aggregazione 1]"
+              name="Multicast Output 1"
+              startId="Package\Attività Flusso di dati\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output aggregazione 1]"
+              endId="Package\Attività Flusso di dati\Multicast.Inputs[Multicast Input 1]"
+              name="Output aggregazione 1"
+              startId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output aggregazione 11]"
+              endId="Package\Attività Flusso di dati\Sort on country_name.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\Attività Flusso di dati\Max of correct answers per country.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca]"
+              endId="Package\Attività Flusso di dati\Access to Geography on geoid.Inputs[Input ricerca]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca1]"
+              endId="Package\Attività Flusso di dati\Sum the correct answers per country and userid.Inputs[Input aggregazione 1]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Attività Flusso di dati\Access to Geography on geoid.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output merge join]"
+              endId="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects.Inputs[Input suddivisione condizionale]"
+              name="Output merge join"
+              startId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output multicast 1]"
+              endId="Package\Attività Flusso di dati\Sort on country_name and userid.Inputs[Input ordinamento]"
+              name="Output multicast 1"
+              startId="Package\Attività Flusso di dati\Multicast.Outputs[Output multicast 1]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output ordinamento]"
+              endId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro]"
+              name="Output ordinamento"
+              startId="Package\Attività Flusso di dati\Sort on country_name and userid.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output ordinamento1]"
+              endId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro]"
+              name="Output ordinamento"
+              startId="Package\Attività Flusso di dati\Sort on country_name.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output origine OLE DB]"
+              endId="Package\Attività Flusso di dati\Access to Users on userid.Inputs[Input ricerca]"
+              name="Output origine OLE DB"
+              startId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Attività Flusso di dati"
+          TopLeft="185.714288876981,109.352942710104" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Attività Flusso di dati">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Attività Flusso di dati\Multicast"
+          TopLeft="397.571432719425,179.779409826215" />
+        <NodeLayout
+          Size="220.8,41.6"
+          Id="Package\Attività Flusso di dati\Access to Geography on geoid"
+          TopLeft="652.821432996161,63.8088211565697" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Attività Flusso di dati\Read table Answers"
+          TopLeft="114.10714241619,62.5735283258877" />
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\Attività Flusso di dati\Access to Users on userid"
+          TopLeft="372.10714241619,62.5735283258877" />
+        <NodeLayout
+          Size="305.6,41.6"
+          Id="Package\Attività Flusso di dati\Sum the correct answers per country and userid"
+          TopLeft="606.285722192453,180.529411056875" />
+        <NodeLayout
+          Size="260,41.6"
+          Id="Package\Attività Flusso di dati\Max_tot_corrects equal to tot_corrects"
+          TopLeft="632.214286365071,390.294116767633" />
+        <NodeLayout
+          Size="188,41.6"
+          Id="Package\Attività Flusso di dati\To Result_assignment2"
+          TopLeft="297.107137222071,391.044115628132" />
+        <NodeLayout
+          Size="236,41.6"
+          Id="Package\Attività Flusso di dati\Sort on country_name and userid"
+          TopLeft="364.82142814264,262.808822797451" />
+        <NodeLayout
+          Size="183.2,49.6"
+          Id="Package\Attività Flusso di dati\Sort on country_name"
+          TopLeft="118.857138307727,296.49999845028" />
+        <NodeLayout
+          Size="128,41.6"
+          Id="Package\Attività Flusso di dati\Merge join"
+          TopLeft="695.642858414017,290.602940203204" />
+        <NodeLayout
+          Size="244.8,41.6"
+          Id="Package\Attività Flusso di dati\Max of correct answers per country"
+          TopLeft="93.6071420330171,177.23529082516" />
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output aggregazione 11]"
+          TopLeft="213.232140170372,218.83529082516">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,77.6647076251197"
+              Start="0,0"
+              End="0,70.1647076251197">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.1647076251197" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output aggregazione 1]"
+          TopLeft="606.285722192453,200.954410441545">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-88.7142894730277,0"
+              Start="0,0"
+              End="-81.2142894730277,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-81.2142894730277,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Multicast Output 1]"
+          TopLeft="397.571432719425,199.307350325688">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-59.164290686408,0"
+              Start="0,0"
+              End="-51.664290686408,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-51.664290686408,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[max correct answer]"
+          TopLeft="632.214286365071,411.469116197883">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-147.107149143,0"
+              Start="0,0"
+              End="-139.607149143,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-139.607149143,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-113.8888870715,5,88.170625,9.1728515625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output origine OLE DB]"
+          TopLeft="285.30714241619,83.3735283258877">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="86.8,0"
+              Start="0,0"
+              End="79.3,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="79.3,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output ordinamento1]"
+          TopLeft="302.057138307727,319.151469326742">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="393.58572010629,0"
+              Start="0,0"
+              End="386.08572010629,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="386.08572010629,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output ordinamento]"
+          TopLeft="600.82142814264,283.608822797451">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="94.8214302713773,22.1941174057528"
+              Start="0,0"
+              End="87.3214302713773,22.1941174057528">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="50.7857152679069,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.7857152679069,0"
+                    Point2="54.7857152679069,0"
+                    Point3="54.7857152679069,4" />
+                  <mssgle:LineSegment
+                    End="54.7857152679069,18.1941174057528" />
+                  <mssgle:CubicBezierSegment
+                    Point1="54.7857152679069,18.1941174057528"
+                    Point2="54.7857152679069,22.1941174057528"
+                    Point3="58.7857152679069,22.1941174057528" />
+                  <mssgle:LineSegment
+                    End="87.3214302713773,22.1941174057528" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output multicast 1]"
+          TopLeft="479.529763764366,221.379409826215">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.4294129712358"
+              Start="0,0"
+              End="0,33.9294129712358">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.9294129712358" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output merge join]"
+          TopLeft="760.928572389544,332.202940203204">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.0911765644294"
+              Start="0,0"
+              End="0,50.5911765644294">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5911765644294" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca1]"
+          TopLeft="761.153577594307,105.40882115657">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,75.1205899003052"
+              Start="0,0"
+              End="0,67.6205899003052">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.6205899003052" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.78587890625,28.0056074501526,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca]"
+          TopLeft="570.50714241619,83.9911747412287">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="82.3142905799712,0"
+              Start="0,0"
+              End="74.8142905799712,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="74.8142905799712,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-29.3787336162644,5,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Access to Geography on geoid">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Geography]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Read table Answers">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Access to Users on userid">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Users]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

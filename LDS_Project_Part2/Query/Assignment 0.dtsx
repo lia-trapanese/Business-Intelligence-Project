@@ -1,0 +1,1222 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/18/2022 4:43:18 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LIA"
+  DTS:CreatorName="LIA\Utente"
+  DTS:DTSID="{B490BB7A-76FB-46E8-9B77-58F6FEC0D673}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.845.0"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Assignment 0"
+  DTS:PackageType="5"
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{F83C8AC5-7D75-4BCE-996B-1C8FC9FA0CC7}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[131.114.72.230.lbi.lds]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0CA88B53-A1E3-4B31-8B4F-54E6C1C97F8C}"
+      DTS:ObjectName="131.114.72.230.lbi.lds">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=131.114.72.230;User ID=lds;Initial Catalog=lbi;Provider=SQLNCLI11.1;Application Name=SSIS-Assignment 0-{0CA88B53-A1E3-4B31-8B4F-54E6C1C97F8C}131.114.72.230.lbi.lds;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+5nkWoEGPEGQevKvW02PLgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD0MmL95lfl7pWXGnc/6g5poOkqu+/O54msek2wZeXp/QAAAAAOgAAAAAIAACAAAACV67docfbg4Qf0H1JkZIkCAaWcxY7bwh5MrTXTCYWm3xAAAABS7jmGrvg+zquqCTZRGCCiQAAAAHCsvrAbYPsVUWNGgGmvPumBwW9NIyf6iYGA6/pwoPXStG7Myt9LcQXPpD6rxNI1h5nVcx8PABsyQxAQ1wtpSDc</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4F08044C-5547-4D6F-B90D-F04B3AE3E152}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Utente\Desktop\Università\Pisa\Primo semestre - Secondo anno\Laboratory of datat science\PROGETTO\SSIS\prova.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="subjectid"
+              DTS:DTSID="{28EED89C-831C-4135-958A-69E9FBEA6B19}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gender"
+              DTS:DTSID="{4A24B3D2-2911-4FD5-8A85-86A621D6C423}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="correct_answer"
+              DTS:DTSID="{5982A47C-E369-434D-927E-3BB80D912C26}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2EE56A43-AFD4-4F45-8EB8-EADAD87D8B23}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Utente\Desktop\Università\Pisa\Primo semestre - Secondo anno\Laboratory of datat science\PROGETTO\SSIS\Second part LDS\result_assignment0.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="subjectid"
+              DTS:DTSID="{91A31B6C-EAC1-4587-866C-369412B55CB6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gender"
+              DTS:DTSID="{0ACA9DE4-92F0-4152-8A97-3E52656E8462}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="iscorrect"
+              DTS:DTSID="{A2396B9F-5AB4-4886-9B2B-B538A5EF797A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lds.di.unipi.it.Group_11_DB.Group_11]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D6C89F45-D072-4197-8EB8-7668807040C5}"
+      DTS:ObjectName="lds.di.unipi.it.Group_11_DB.Group_11">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lds.di.unipi.it;User ID=Group_11;Initial Catalog=Group_11_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-Package-{D6C89F45-D072-4197-8EB8-7668807040C5}lds.di.unipi.it.Group_11_DB.Group_11;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+5nkWoEGPEGQevKvW02PLgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACi11aKpONcCsd9bJieBQ+T3CjF0rdmtEXqv+Gn2/qbmwAAAAAOgAAAAAIAACAAAADuzvPB5CUFIGFBPDuQCHLOq8e8Vdh6AMOejEOihe4x4yAAAAB5gdvC1PhxeuSm6UBfE1uebK5nBOQxJ5Gpw8znEshfxEAAAADZ0rsNmNt1VMqEdBHiWh26MeDqml74l7k//zoUB2stqFRbrSSQzGi8fPL0v+MQmWkpiy5ZRTTW3ZKnCLYfi6Uh</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Attività Flusso di dati"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Attività Flusso di dati"
+      DTS:DTSID="{02655283-74FD-4ED1-8DFD-BB5017026199}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Attività Flusso di dati"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Attività Flusso di dati\Access to Users on userid"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Access to Users on userid"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Users]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Users]) [refTable]
+where [refTable].[userid] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="userid" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="dateofbirthid" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="geoid" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="gender" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[userid]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Access to Users on userid.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_11_DB.Group_11]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_11_DB.Group_11]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Access to Users on userid.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Access to Users on userid.Inputs[Input ricerca].Columns[userid]"
+                      cachedDataType="i4"
+                      cachedName="userid"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[userid]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">userid</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Access to Users on userid.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca].Columns[userid]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copia colonna"
+                      lineageId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca].Columns[userid]"
+                      name="userid"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">userid</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca].Columns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="50"
+                      lineageId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca].Columns[gender]"
+                      name="gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">gender</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Access to Users on userid.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Access to Users on userid.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Filter neutral Gender"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Suddivisione condizionale;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Indirizza righe di dati a output diversi a seconda del contenuto dei dati. Usare le condizioni (espressioni SSIS) per specificare le righe da indirizzare. Ad esempio, separare i record da eliminare da quelli pronti per essere caricati oppure indirizzare unicamente un subset di record."
+              name="Filter neutral Gender"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Filter neutral Gender.Inputs[Input suddivisione condizionale]"
+                  description="Input della trasformazione Suddivisione condizionale"
+                  name="Input suddivisione condizionale">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Filter neutral Gender.Inputs[Input suddivisione condizionale].Columns[gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="gender"
+                      lineageId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca].Columns[gender]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Filter neutral Gender.Outputs[Filter on gender]"
+                  description="Output 1 della trasformazione Suddivisione condizionale"
+                  errorOrTruncationOperation="Calcolo"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Filter on gender"
+                  synchronousInputId="Package\Attività Flusso di dati\Filter neutral Gender.Inputs[Input suddivisione condizionale]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica l'espressione. Questa versione dell'espressione utilizza gli identificatori di derivazione anziché i nomi di colonna."
+                      name="Expression">#{Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca].Columns[gender]} != "Neutral"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica la versione descrittiva dell'espressione. Questa versione dell'espressione utilizza i nomi di colonna."
+                      expressionType="Notify"
+                      name="FriendlyExpression">gender != "Neutral"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la posizione della condizione nell'elenco delle condizioni valutate dalla trasformazione. L'ordine di valutazione è crescente, dal valore più basso al più alto."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Filter neutral Gender.Outputs[Output predefinito suddivisione condizionale]"
+                  description="Output predefinito per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  name="Output predefinito suddivisione condizionale"
+                  synchronousInputId="Package\Attività Flusso di dati\Filter neutral Gender.Inputs[Input suddivisione condizionale]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Filter neutral Gender.Outputs[Output errori suddivisione condizionale]"
+                  description="Output degli errori per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori suddivisione condizionale"
+                  synchronousInputId="Package\Attività Flusso di dati\Filter neutral Gender.Inputs[Input suddivisione condizionale]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Filter neutral Gender.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Filter neutral Gender.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Filter neutral Gender.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Filter neutral Gender.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Group by on subjectid and gender, count is_correct"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Inputs[Input aggregazione 1].Columns[subjectid]"
+                      cachedDataType="i4"
+                      cachedName="subjectid"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[subjectid]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Inputs[Input aggregazione 1].Columns[gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="gender"
+                      lineageId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca].Columns[gender]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Inputs[Input aggregazione 1].Columns[iscorrect]"
+                      cachedDataType="i4"
+                      cachedName="iscorrect"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[iscorrect]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Outputs[Output aggregazione 1].Columns[subjectid]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Outputs[Output aggregazione 1].Columns[subjectid]"
+                      name="subjectid">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[subjectid]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Outputs[Output aggregazione 1].Columns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Outputs[Output aggregazione 1].Columns[gender]"
+                      name="gender">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca].Columns[gender]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Outputs[Output aggregazione 1].Columns[iscorrect]"
+                      dataType="ui8"
+                      lineageId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Outputs[Output aggregazione 1].Columns[iscorrect]"
+                      name="iscorrect">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[iscorrect]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\ORDER BY subjectid, gender"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="ORDER BY subjectid, gender"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Inputs[Input ordinamento].Columns[subjectid]"
+                      cachedDataType="i4"
+                      cachedName="subjectid"
+                      lineageId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Outputs[Output aggregazione 1].Columns[subjectid]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Inputs[Input ordinamento].Columns[gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="gender"
+                      lineageId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Outputs[Output aggregazione 1].Columns[gender]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Inputs[Input ordinamento].Columns[iscorrect]"
+                      cachedDataType="ui8"
+                      cachedName="iscorrect"
+                      lineageId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Outputs[Output aggregazione 1].Columns[iscorrect]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Outputs[Output ordinamento].Columns[subjectid]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Outputs[Output ordinamento].Columns[subjectid]"
+                      name="subjectid"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Outputs[Output aggregazione 1].Columns[subjectid]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Outputs[Output ordinamento].Columns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Outputs[Output ordinamento].Columns[gender]"
+                      name="gender"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Outputs[Output aggregazione 1].Columns[gender]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Outputs[Output ordinamento].Columns[iscorrect]"
+                      dataType="ui8"
+                      lineageId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Outputs[Output ordinamento].Columns[iscorrect]"
+                      name="iscorrect">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Outputs[Output aggregazione 1].Columns[iscorrect]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\Read table Answers"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+              description="Origine OLE DB"
+              name="Read table Answers"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowset">[dbo].[Answers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Variabile che contiene il comando SQL da eseguire."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la modalità utilizzata per accedere al database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mapping tra i parametri nel comando SQL e le variabili."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Read table Answers.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_11_DB.Group_11]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_11_DB.Group_11]"
+                  description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB]"
+                  name="Output origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[userid]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[userid]"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[userid]"
+                      name="userid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[subjectid]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[subjectid]"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[subjectid]"
+                      name="subjectid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[iscorrect]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[iscorrect]"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].Columns[iscorrect]"
+                      name="iscorrect"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[answerid]"
+                      dataType="i4"
+                      name="answerid" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[questionid]"
+                      dataType="i4"
+                      name="questionid" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[userid]"
+                      dataType="i4"
+                      name="userid" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[organizationid]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="organizationid" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[dateid]"
+                      dataType="i4"
+                      name="dateid" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[subjectid]"
+                      dataType="i4"
+                      name="subjectid" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[answer_value]"
+                      dataType="i4"
+                      name="answer_value" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[correct_answer]"
+                      dataType="i4"
+                      name="correct_answer" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[iscorrect]"
+                      dataType="i4"
+                      name="iscorrect" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB].ExternalColumns[confidence]"
+                      dataType="r8"
+                      name="confidence" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB]"
+                  isErrorOut="true"
+                  name="Output errori origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[userid]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[userid]"
+                      name="userid" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[subjectid]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[subjectid]"
+                      name="subjectid" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[iscorrect]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output errori origine OLE DB].Columns[iscorrect]"
+                      name="iscorrect" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Attività Flusso di dati\To Result_assignment0"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destinazione file flat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Destinazione file flat"
+              localeId="1033"
+              name="To Result_assignment0"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifica se i dati verranno sovrascritti o accodati nel file di destinazione."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il testo da scrivere nel file di destinazione prima della scrittura dei dati."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando il qualificatore di testo è abilitato, specifica se il qualificatore di testo nei dati scritti nel file di destinazione verrà o meno preceduto da un carattere di escape."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\To Result_assignment0.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\To Result_assignment0.Inputs[Input destinazione file flat]"
+                  hasSideEffects="true"
+                  name="Input destinazione file flat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\To Result_assignment0.Inputs[Input destinazione file flat].Columns[subjectid]"
+                      cachedDataType="i4"
+                      cachedName="subjectid"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\To Result_assignment0.Inputs[Input destinazione file flat].ExternalColumns[subjectid]"
+                      lineageId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Outputs[Output ordinamento].Columns[subjectid]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\To Result_assignment0.Inputs[Input destinazione file flat].Columns[gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="gender"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\To Result_assignment0.Inputs[Input destinazione file flat].ExternalColumns[gender]"
+                      lineageId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Outputs[Output ordinamento].Columns[gender]" />
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\To Result_assignment0.Inputs[Input destinazione file flat].Columns[iscorrect]"
+                      cachedDataType="ui8"
+                      cachedName="iscorrect"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\To Result_assignment0.Inputs[Input destinazione file flat].ExternalColumns[iscorrect]"
+                      lineageId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Outputs[Output ordinamento].Columns[iscorrect]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\To Result_assignment0.Inputs[Input destinazione file flat].ExternalColumns[subjectid]"
+                      dataType="i4"
+                      name="subjectid" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\To Result_assignment0.Inputs[Input destinazione file flat].ExternalColumns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="gender" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\To Result_assignment0.Inputs[Input destinazione file flat].ExternalColumns[iscorrect]"
+                      dataType="ui8"
+                      name="iscorrect" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Filter on gender and iscorrect]"
+              endId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Inputs[Input aggregazione 1]"
+              name="Filter on gender and iscorrect"
+              startId="Package\Attività Flusso di dati\Filter neutral Gender.Outputs[Filter on gender]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output aggregazione 1]"
+              endId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca]"
+              endId="Package\Attività Flusso di dati\Filter neutral Gender.Inputs[Input suddivisione condizionale]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Attività Flusso di dati\Access to Users on userid.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output ordinamento]"
+              endId="Package\Attività Flusso di dati\To Result_assignment0.Inputs[Input destinazione file flat]"
+              name="Output ordinamento"
+              startId="Package\Attività Flusso di dati\ORDER BY subjectid, gender.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output origine OLE DB]"
+              endId="Package\Attività Flusso di dati\Access to Users on userid.Inputs[Input ricerca]"
+              name="Output origine OLE DB"
+              startId="Package\Attività Flusso di dati\Read table Answers.Outputs[Output origine OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Attività Flusso di dati"
+          TopLeft="238.571432634276,72.647059842377" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Attività Flusso di dati">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Attività Flusso di dati\Filter neutral Gender"
+          TopLeft="96.3928581798563,132.235295474323" />
+        <NodeLayout
+          Size="188,41.6"
+          Id="Package\Attività Flusso di dati\To Result_assignment0"
+          TopLeft="415.89286422547,236.294120960995" />
+        <NodeLayout
+          Size="320.8,41.6"
+          Id="Package\Attività Flusso di dati\Group by on subjectid and gender, count is_correct"
+          TopLeft="413.214292751284,134.970590128206" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Attività Flusso di dati\Read table Answers"
+          TopLeft="98.6904768493711,30.68627409869" />
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\Attività Flusso di dati\Access to Users on userid"
+          TopLeft="414.761911825258,31.6078435805429" />
+        <NodeLayout
+          Size="212.8,41.6"
+          Id="Package\Attività Flusso di dati\ORDER BY subjectid, gender"
+          TopLeft="77.1428584565926,236.717650244063" />
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output ordinamento]"
+          TopLeft="289.942858456593,257.305885602529">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="125.950005768877,0"
+              Start="0,0"
+              End="118.450005768877,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="118.450005768877,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca]"
+          TopLeft="513.961911825258,73.2078435805429">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-329.969053645402,59.0274518937798"
+              Start="0,0"
+              End="-329.969053645402,51.5274518937798">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5137259468899" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.5137259468899"
+                    Point2="0,29.5137259468899"
+                    Point3="-4,29.5137259468899" />
+                  <mssgle:LineSegment
+                    End="-325.969053645402,29.5137259468899" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-325.969053645402,29.5137259468899"
+                    Point2="-329.969053645402,29.5137259468899"
+                    Point3="-329.969053645402,33.5137259468899" />
+                  <mssgle:LineSegment
+                    End="-329.969053645402,51.5274518937798" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-231.770405728951,34.5137259468899,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output aggregazione 1]"
+          TopLeft="573.614292751284,176.570590128206">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-390.071434294691,60.1470601158573"
+              Start="0,0"
+              End="-390.071434294691,52.6470601158573">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.0735300579287" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.0735300579287"
+                    Point2="0,30.0735300579287"
+                    Point3="-4,30.0735300579287" />
+                  <mssgle:LineSegment
+                    End="-386.071434294691,30.0735300579287" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-386.071434294691,30.0735300579287"
+                    Point2="-390.071434294691,30.0735300579287"
+                    Point3="-390.071434294691,34.0735300579287" />
+                  <mssgle:LineSegment
+                    End="-390.071434294691,52.6470601158573" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Filter on gender and iscorrect]"
+          TopLeft="271.592858179856,154.402942801264">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="141.621434571428,0"
+              Start="0,0"
+              End="134.121434571428,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="134.121434571428,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="31.4420258794638,5,71.2373828125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output origine OLE DB]"
+          TopLeft="269.890476849371,51.9470588396165">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="144.871434975887,0"
+              Start="0,0"
+              End="137.371434975887,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="137.371434975887,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Read table Answers">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Access to Users on userid">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Users]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
